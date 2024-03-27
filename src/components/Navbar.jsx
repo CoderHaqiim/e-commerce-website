@@ -20,7 +20,6 @@ const Navbar = ({username,cartItems}) => {
                         </div>
                     </Link>
                     <div className='w-[20%] h-full flex justify-end gap-[20px]'>
-
                         <div className="navs w-1/2 h-full">
                             <Profile username={username}/>
                         </div>
