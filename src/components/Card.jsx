@@ -37,7 +37,7 @@ const Card = ({item,type,useItemId}) => {
                         <img src={item.image} alt="item" className='w-[170px] h-[150px]'/>
                     </div>
                     <div className='w-[100%] h-[15%] flex justify-between p-[5px]'>
-                        <div className='w-full h-[100%] flex items-center justify-center'>{item.type}</div>
+                        <div className='w-full h-[100%] flex items-center justify-center'>{item.title}</div>
                     </div>
                 </div>
         )}
