@@ -22,7 +22,7 @@ const Button = ({buttonText,id,filteritems,addtocart,hideButton}) => {
     return (
         hideButton?
         <></>:
-        <button onClick ={CheckAction} id={id} className='hover:bg-baseColor3 h-[40px] w-auto px-[2rem] bg-baseColor text-white flex items-center justify-center rounded-md cursor-pointer'>
+        <button onClick ={CheckAction} id={id} className='hover:bg-baseColor3 h-[40px] w-auto px-[2rem] flex-shrink-0 bg-baseColor text-white flex justify-center items-center no-wrap text-center rounded-md cursor-pointer'>
             {buttonText}
         </button>
       

@@ -20,7 +20,7 @@ const Card = ({item,type,useItemId}) => {
         )}break;
         case "discount": 
             {return (
-                <div onClick={()=>{console.log(item.id)}}className='w-[175px] h-[175px] bg-white rounded-md shadow-md cursor-pointer relative'>
+                <div onClick={()=>{console.log(item.id)}}className='w-[175px] h-[175px] flex-shrink-0 bg-white rounded-md shadow-md cursor-pointer relative'>
                     <div className='flex shadow-md items-center justify-center text-[0.8rem] font-bold absolute w-[40px] h-[25px] bg-red top-[5px] left-[75%] rounded-sm text-white'>{item.off}</div>
                     <div className='w-[100%] h-[85%] flex items-center justify-center py-[12px] px-[8px]'>
                         <img src={item.image} alt="item" className='w-[100%] h-[100%]'/>
@@ -32,7 +32,7 @@ const Card = ({item,type,useItemId}) => {
         )}break;
         default: 
             {return (
-                <div onClick={ab} className='w-[300px] h-[250px] bg-white rounded-md shadow-md cursor-pointer'>
+                <div onClick={ab} className='w-[250px] h-[250px] bg-white rounded-md shadow-md cursor-pointer'>
                     <div className='w-[100%] h-[85%] flex items-center justify-center py-[12px] px-[8px]'>
                         <img src={item.image} alt="item" className='w-[170px] h-[150px]'/>
                     </div>

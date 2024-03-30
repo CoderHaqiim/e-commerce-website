@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const Showcase = ({display,title,itemId,useItemId}) => {
 
             return (
-                <div className='w-full h-auto overflow-y-hidden my-20 m-auto rounded-md px-[10%]'>
+                <div className='w-full h-auto overflow-y-hidden my-10 m-auto rounded-md px-[15%]'>
                     <>
                         <Titlehead title={title}/>
                         <div className='text-baseColor3 text-[1.2rem] text-grey'>

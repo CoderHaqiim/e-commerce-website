@@ -2,4 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-class{color:#f8e8e8}
+.categories::-webkit-scrollbar,.discount::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
+}

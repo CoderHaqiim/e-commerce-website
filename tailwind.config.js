@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {},
+    screens:{
+      md:'970px',
+      lg:'1100px'
+    },
     colors:{
       baseColor:'#a10909',
       baseColor2:"#f8e8e8",

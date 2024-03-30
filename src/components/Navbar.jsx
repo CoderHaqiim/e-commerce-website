@@ -6,7 +6,7 @@ import logo from '../assets/allitems/emartlogo.svg'
 
 const Navbar = ({username,cartItems}) => {
     return (
-        <div className="w-full h-[12vh] bg-baseColor top-[-24px] sticky z-30">
+        <div className="w-full h-[100px] bg-baseColor top-[-24px] sticky z-30">
             <div className="w-full h-[30%] bg-black text-white">
                 <div className="container w-[90%] h-[100%] mx-auto flex items-center">
                     advertisment

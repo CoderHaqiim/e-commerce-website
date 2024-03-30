@@ -3,8 +3,8 @@ import Button from './Button';
 
 const CategoriesNav = ({filteritems}) => {
     return (
-        <div className='w-full h-[8vh] bg-pink-600'>
-            <div className="container mx-auto w-[90%] gap-[10px] py-[10px] h-full flex justify-center overflow-y-scrol">
+        <div className=' w-full h-[10vh] flex justify-center items-center'>
+            <div className="px-[10px] categories w-full gap-[10px] h-full flex items-center overflow-x-scroll md:justify-center">
                 <Button filteritems = {filteritems} buttonText="All" id="all"/>
                 <Button filteritems={filteritems} buttonText="Phones" id="phone"/>
                 <Button filteritems={filteritems} buttonText="Laptops" id="laptop"/>
