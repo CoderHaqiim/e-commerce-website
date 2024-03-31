@@ -7,10 +7,10 @@ import { Link } from 'react-router-dom';
 const Showcase = ({display,title,itemId,useItemId}) => {
 
             return (
-                <div className='w-full h-auto overflow-y-hidden my-10 m-auto rounded-md px-[15%]'>
+                <div className='w-full h-auto overflow-y-hidden px-[20px] my-10 m-auto rounded-md md:px-[15%]'>
                     <>
                         <Titlehead title={title}/>
-                        <div className='text-baseColor3 text-[1.2rem] text-grey'>
+                        <div className='text-baseColor3 text-[1rem] text-grey md:text-[1.2rem] '>
                             <strong>Browse each categories for items thoughfully selected for you</strong>
                         </div>
                     </>

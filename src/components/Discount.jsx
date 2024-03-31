@@ -4,10 +4,10 @@ import Card from './Card';
 
 const Discount = ({title,display}) => {
     return (
-        <div className='w-full  h-[auto] bg-white py-[20px] pl-[15%] m-auto'>
+        <div className='w-full  h-[auto] pl-[20px] bg-white py-[20px] m-auto md:pl-[15%]'>
             <>
                 <Titlehead title={title}/>
-                <div className='text-baseColor3 text-[1.2rem] text-grey'>
+                <div className='text-baseColor3 text-[1rem] text-grey md:text-[1.2rem]'>
                     <strong>Get more with less with our discount offers</strong>
                 </div>
             </>

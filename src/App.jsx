@@ -43,6 +43,7 @@ function App() {
   const productSelected = useRef(true)
   const changedcart = useRef(true)
   const prevCart = useRef(cartItems)
+  const [screenWidth,setScreenWidth] = useState(window.innerWidth)
 
   useEffect(()=>{
     if(rendered.current) !rendered
@@ -52,7 +53,7 @@ function App() {
   },[itemId])
 
   useEffect(()=>{
-    if(productSelected.current) !productSelected
+    if(productSelected.current)
       {
         setImage(product.image)
         setName(product.title)
@@ -66,16 +67,19 @@ function App() {
     if(changedcart.current) !changedcart
     {
       setCartItems(cart.length)
-      console.log(cartItems)
-      console.log(prevCart.current)
-
-          const calc = allAmount.reduce((a,b)=>a+b)
-          console.log(calc)
-          setTotal(calc)
+      const calc = allAmount.reduce((a,b)=>a+b)
+      setTotal(calc)
     }
   },[cart])
 
   
+  const readWidth = () =>{
+    window.addEventListener('resize',()=>{
+      setScreenWidth(window.innerWidth)
+    })
+  }
+
+  readWidth()
 
   const addtocart = () =>{
       addedmessage()
@@ -103,9 +107,13 @@ function App() {
 
   const addedmessage = () =>{
     setHidden(false)
-    setTimeout(()=>{
+    let bounce = setTimeout(()=>{
       setHidden(true)
     },2000)
+
+    return ()=>{
+      clearTimeout(bounce)
+    }
   }
 
   const removeItem = (item) =>{
@@ -133,7 +141,7 @@ function App() {
         <>
           <Route path='/' element={<Home display={list} filteritems={filteritems} allitems={list} all={all} clear={clear} useItemId={useItemId} itemId={itemId}/>}/>
           <Route path='/addtocart' element={<AddToPage hideButton={hideButton}itemId={itemId} hidden={hidden} allItems={allItems} image={image} name={name} price={price} addtocart={addtocart}/>}/>
-          <Route path = '/shoppingcart' element={<Cart removeId={removeId} removeItem={removeItem} cartItems={cartItems} cart={cart} total={total}/>}/>
+          <Route path = '/shoppingcart' element={<Cart screenWidth={screenWidth} removeId={removeId} removeItem={removeItem} cartItems={cartItems} cart={cart} total={total}/>}/>
         </> 
       </Routes>
       <Footer/>

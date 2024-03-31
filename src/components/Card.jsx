@@ -32,12 +32,12 @@ const Card = ({item,type,useItemId}) => {
         )}break;
         default: 
             {return (
-                <div onClick={ab} className='w-[250px] h-[250px] bg-white rounded-md shadow-md cursor-pointer'>
-                    <div className='w-[100%] h-[85%] flex items-center justify-center py-[12px] px-[8px]'>
+                <div onClick={ab} className='w-[350px] h-[350px] bg-white rounded-md shadow-md cursor-pointer md:w-[250px] md:h-[250px]'>
+                    <div className='w-[100%] h-[80%] flex items-center justify-center pt-[12px] px-[8px]'>
                         <img src={item.image} alt="item" className='w-[170px] h-[150px]'/>
                     </div>
-                    <div className='w-[100%] h-[15%] flex justify-between p-[5px]'>
-                        <div className='w-full h-[100%] flex items-center justify-center'>{item.title}</div>
+                    <div className='w-[100%] h-[15%] flex justify-between px-[5px]'>
+                        <div className='w-full h-[100%] flex items-center justify-center text-[1.2rem] md:text-[1rem]'>{item.title}</div>
                     </div>
                 </div>
         )}
