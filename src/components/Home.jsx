@@ -9,7 +9,7 @@ const Home = ({action,display,showcaseitems,filteritems,all,clear,itemId,useItem
         <div className=' w-full h-auto bg-baseColor2'>
             <Hero/>
             <CategoriesNav action={action} filteritems={filteritems}/>
-            <Showcase title="Categories" clear={clear} display={display} useItemId={useItemId} showcaseitems={showcaseitems} all={all} itemId={itemId}/>
+            <Showcase title="Categories" clear={clear} display={display} filteritems={filteritems} useItemId={useItemId} showcaseitems={showcaseitems} all={all} itemId={itemId}/>
             <Discount title="Discounted Deals" display={display}/>
         </div>
     );

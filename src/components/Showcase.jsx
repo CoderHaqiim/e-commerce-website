@@ -4,22 +4,29 @@ import Titlehead from './Titlehead';
 import { Link } from 'react-router-dom';
 
 
-const Showcase = ({display,title,itemId,useItemId}) => {
+const Showcase = ({display,filteritems,title,itemId,all,useItemId}) => {
 
             return (
-                <div className='w-full h-auto overflow-y-hidden px-[20px] my-10 m-auto rounded-md md:px-[15%]'>
-                    <>
-                        <Titlehead title={title}/>
-                        <div className='text-baseColor3 text-[1rem] text-grey md:text-[1.2rem] '>
-                            <strong>Browse each categories for items thoughfully selected for you</strong>
+                <div className='w-full h-auto overflow-y-hidden my-10 m-auto rounded-md'>
+                    <div className='container w-[70%] h-auto mx-auto sm:w-[90%] md:w-[80%]'>
+                        <div>
+                            <Titlehead title={title}/>
+                            <div className='text-baseColor3 text-[1rem] text-grey md:text-[1.2rem] '>
+                                <strong>Browse each categories for items thoughfully selected for you</strong>
+                            </div>
                         </div>
-                    </>
-        
-                    <div className="container w-[100%] h-full flex gap-[1.5rem] justify-center py-[2%] my-[30px] flex-wrap mx-auto">
-                        {display.map((item)=><div key={item.id}><Link to= "/addtocart"><Card key={item.id}   item={item} useItemId={useItemId} itemId={itemId}/></Link></div>)}
+            
+                        <div className="container w-full h-full flex gap-[1.5rem] justify-center py-[2%] my-[30px] flex-wrap mx-auto">
+                            {
+                               all?
+                                display.map((item)=><div key={item.id}><Card key={item.id} filteritems={filteritems} type='home' id = {item.type} item={item} useItemId={useItemId} itemId={itemId}/></div>):
+                                display.map((item)=><div key={item.id}><Link to= "/addtocart"><Card key={item.id}  item={item} useItemId={useItemId} itemId={itemId}/></Link></div>)
+                            }
+                        </div>
                     </div>
                 </div>
             )
 }
 
 export default Showcase;
+// filteritems={filteritems}

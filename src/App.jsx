@@ -135,7 +135,7 @@ function App() {
   }
 
   return(
-    <div className="w-full h-auto bg-baseColor2 max-w-[1400px]">
+    <div className="w-full h-auto bg-baseColor2">
       <Navbar username = {username} cartItems={cartItems}/>
       <Routes>
         <>

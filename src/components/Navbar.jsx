@@ -13,7 +13,7 @@ const Navbar = ({username,cartItems}) => {
                 </div>
             </div>
             <div className='w-full h-[70%] bg-green-500'>
-                <div className="container flex items-center w-[85%] h-full mx-auto justify-between">
+                <div className="container flex items-center w-[90%] h-full mx-auto justify-between">
                     <Link to= "/">
                         <div className="logo h-[60px] w-[70px] text-white text-2xl flex items-center justify-center font-bold">
                             <img src={logo} alt="logo" />
