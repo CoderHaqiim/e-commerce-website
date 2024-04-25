@@ -5,7 +5,7 @@ import Card from './Card';
 const Discount = ({title,display}) => {
     return (
         <div className='w-full  h-[auto] bg-white m-auto'>
-            <div className='container w-70% sm:w-[90%] md:w-[80%] h-auto mx-auto'>
+            <div className='container w-[70%] sm:w-[90%] md:w-[80%] h-auto mx-auto'>
                 <div>
                     <Titlehead title={title}/>
                     <div className='text-baseColor3 text-[1rem] text-grey md:text-[1.2rem]'>

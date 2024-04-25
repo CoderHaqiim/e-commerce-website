@@ -48,7 +48,7 @@ const Card = ({item,type,id,useItemId,filteritems}) => {
         )}break;
         default: 
             {return (
-                <div onClick={pickId} className='w-[350px] h-[350px] bg-white rounded-md shadow-md cursor-pointer md:w-[250px] md:h-[250px] xl:w-[350px] xl:h-[350px]'>
+                <div onClick={pickId} className='w-[350px] h-[350px] bg-white rounded-md shadow-md cursor-pointer md:w-[230px] md:h-[230px] xl:w-[350px] xl:h-[350px]'>
                     <div className='w-[100%] h-[80%] flex items-center justify-center pt-[12px] px-[8px]'>
                         <img src={item.image} alt="item" className='w-[170px] h-[150px]'/>
                     </div>
