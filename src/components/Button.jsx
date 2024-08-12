@@ -21,7 +21,7 @@ const Button = ({buttonText,id,filteritems,addtocart,hideButton,selected, setSel
     return (
         hideButton?
         <></>:
-        <button onClick ={CheckAction} className={`${selected === id ? 'bg-baseColor3' : 'bg-baseColor'} h-[40px] w-auto px-[2rem] flex-shrink-0 text-white flex justify-center items-center no-wrap text-center rounded-md cursor-pointer`}>
+        <button onClick ={CheckAction} className={`${selected === id ?'bg-baseColor text-white':'bg-transparent text-baseColor'} px-[10px] py-[5px] w-auto border-[solid] border-[1px] border-baseColor flex-shrink-0 flex justify-center items-center no-wrap text-center rounded-small cursor-pointer`}>
             {buttonText}
         </button>
       

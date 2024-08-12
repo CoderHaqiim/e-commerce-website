@@ -2,9 +2,9 @@ import React from 'react';
 
 const Titlehead = ({title}) => {
     return (
-        <div className='font-bold text-[2rem] mt-[20px] flex items-center text-baseColor'>
+        <h1 className='font-bold text-[1.6rem] font-900 h-auto flex items-center text-baseColor'>
             {title}
-        </div>
+        </h1>
     );
 }
 

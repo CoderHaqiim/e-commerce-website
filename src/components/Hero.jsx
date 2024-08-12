@@ -1,30 +1,15 @@
 import { Container } from 'postcss';
+import HeroBanner from './HeroBanner';
 import React from 'react';
 
 const Hero = () => {
+    const bannerArray = [{name:'banner1',id: 1},{name:'banner2',id: 2},{name:'banner3',id :3}]
     return (
-        <div className='mb-10'>
-            <swiper-container slides-per-view="1" speed="1000 " loop="true" navigation="false" pagination="true" autoplay="true"> 
-                <swiper-slide className="w-full">
-                    <div className='w-full h-[70vh] bg-yellow-200 py-[2%] '>
-                        <div className="w-full bg-baseColor mx-auto h-full flex justify-center items-center text-white">slide1</div>
-                    </div>
-                </swiper-slide>
-                <swiper-slide className="w-full">
-                    <div className='w-full h-[70vh] bg-yellow-200 py-[2%] '>
-                        <div className="w-full bg-baseColor mx-auto h-full flex justify-center items-center text-white">slide2</div>
-                    </div>
-                </swiper-slide>
-                <swiper-slide className="w-full">
-                    <div className='w-full h-[70vh] bg-yellow-200 py-[2%]'>
-                        <div className="w-full bg-baseColor mx-auto h-full flex justify-center items-center text-white">slide3</div>
-                    </div>
-                </swiper-slide>
-                <swiper-slide className="w-full">
-                    <div className='w-full h-[70vh] bg-yellow-200 py-[2%]'>
-                        <div className="w-full bg-baseColor mx-auto h-full flex justify-center items-center text-white">slide4</div>
-                    </div>
-                </swiper-slide>
+        <div className='container mb-10 m-auto'>
+            <swiper-container slides-per-view="1" speed="1000 " loop="true" navigation="false" pagination="false" autoplay="true"> 
+              {
+                bannerArray.map((banner)=><HeroBanner key={banner.id} name={banner.name}/>)
+              }
             </swiper-container>
         </div>
     );

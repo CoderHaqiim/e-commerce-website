@@ -11,8 +11,8 @@ const Showcase = ({display,filteritems,title,itemId,all,useItemId}) => {
                     <div className='container w-full md:w-[80%] px-[20px]'>
                         <div className='w-full'>
                                 <Titlehead title={title}/>
-                                <div className='text-baseColor3 text-[1rem] text-grey md:text-[1.2rem] '>
-                                    <strong>Browse each categories for items thoughfully selected for you</strong>
+                                <div className='text-baseColor3 text-[1rem] text-grey md:text-[1.1rem] '>
+                                    Browse each categories for items thoughfully selected for you
                                 </div>
                         </div>
             

@@ -12,10 +12,18 @@ export default {
       lg:'1024px',
       xl:'1280px'
     },
+    borderRadius:{
+      small:'10px',
+      medium:'15px',
+      large:'20px'
+    },
     colors:{
-      baseColor:'#a10909',
-      baseColor2:"#f8e8e8",
+      baseColor:'#111111',
+      baseColor2:"#f5e8cd",
       baseColor3:"#640a0a",
+      accent:'#eb8911',
+      accent2:'',
+      accent3:'#ebd7d4',
       white:"white",
       black:"#111111",
       grey:"#3e3636",
@@ -26,7 +34,7 @@ export default {
     },
     boxShadow:{
       md:"0px 0px 5px -2px black",
-      special:"0px 0px 3px -1px black",
+      special:"0px 0px 5px -3px black",
     }
   },
   plugins: [],

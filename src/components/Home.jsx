@@ -6,7 +6,7 @@ import Discount from './Discount';
 
 const Home = ({action,display,showcaseitems,filteritems,all,clear,itemId,useItemId}) => {
     return (
-        <div className=' w-full h-auto bg-baseColor2'>
+        <div className=' w-full h-auto py-[20px]'>
             <Hero/>
             <CategoriesNav action={action} filteritems={filteritems}/>
             <Showcase title="Categories" clear={clear} display={display} filteritems={filteritems} useItemId={useItemId} showcaseitems={showcaseitems} all={all} itemId={itemId}/>
